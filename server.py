@@ -115,7 +115,8 @@ def edit_news(id):
             return redirect('/')
         else:
             abort(404)
-    return render_template('news.html',title='Редактирование новости',form=form, file=file )
+    return render_template('news.html', title='Редактирование новости', form=form, file=file)
+
 
 @app.route('/news_delete/<int:id>', methods=['GET', 'POST'])
 @login_required
